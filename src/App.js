@@ -1,6 +1,6 @@
 import React from 'react';
 import Header from './Header';
-import MapSection from './MapSection';
+import Map from './Map';
 
 import './App.css';
 
@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <MapSection />
+      <Map />
     </div>
   )
 }
