@@ -1,0 +1,19 @@
+.Header {
+    background-color: darkslateblue;
+    background-image: url('pattern-bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.Header__title {
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 500;
+    margin: 2.5rem 0;
+}
