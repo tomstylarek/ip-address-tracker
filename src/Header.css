@@ -4,11 +4,12 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 0 0 2rem 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    z-index: 5;
 }
 
 .Header__title {

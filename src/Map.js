@@ -5,7 +5,7 @@ const TOKEN = "pk.eyJ1IjoidG9tYXNzdHlsYXJlayIsImEiOiJja2dpMGswem4wOWhlMnVuNjIwZn
 
 function Map() {
     const [viewport, setViewport] = useState({
-      width: "100%",
+      width: "100%",  // no puede ser responsive porque viene de una API. 
       height: 650,
       latitude: 37.7577,
       longitude: -122.4376,
@@ -13,12 +13,14 @@ function Map() {
     });
   
     return (
-      <ReactMapGL
-        {...viewport} 
-        mapboxApiAccessToken={TOKEN} 
-        mapStyle="mapbox://styles/mapbox/dark-v9"
-        onViewportChange={nextViewport => setViewport(nextViewport)}
-      />
+      <div className="Map">
+        <ReactMapGL
+          {...viewport} 
+          mapboxApiAccessToken={TOKEN} 
+          mapStyle="mapbox://styles/mapbox/dark-v9"
+          onViewportChange={nextViewport => setViewport(nextViewport)}
+        />
+      </div>
     );
 }
 
