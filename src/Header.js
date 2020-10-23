@@ -13,7 +13,9 @@ function Header(props) {
                 handleChange={props.handleChange} 
                 handleSubmit={props.handleSubmit} 
             />
-            <InfoTable />
+            <InfoTable 
+                data={props.data}
+            />
         </header>
     )
 }

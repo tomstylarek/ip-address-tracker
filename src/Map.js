@@ -1,25 +1,29 @@
-import React, { useState } from 'react'
-import ReactMapGL from 'react-map-gl'
+import React from 'react'
+import ReactMapGL, { Marker } from 'react-map-gl'
 
 const TOKEN = "pk.eyJ1IjoidG9tYXNzdHlsYXJlayIsImEiOiJja2dpMGswem4wOWhlMnVuNjIwZnR2ajBkIn0.A4uIS8d94phR-LZ4B7kmFw"
 
-function Map() {
-    const [viewport, setViewport] = useState({
-      width: "100%",  // no puede ser responsive porque viene de una API. 
-      height: 650,
-      latitude: 37.7577,
-      longitude: -122.4376,
-      zoom: 13
-    });
-  
+function Map(props) {
     return (
       <div className="Map">
         <ReactMapGL
-          {...viewport} 
+          width="100%" 
+          height={650} 
+          latitude={props.latitude} 
+          longitude={props.longitude} 
+          zoom={13} 
           mapboxApiAccessToken={TOKEN} 
           mapStyle="mapbox://styles/mapbox/dark-v9"
-          onViewportChange={nextViewport => setViewport(nextViewport)}
-        />
+        >
+          <Marker 
+            latitude={props.latitude} 
+            longitude={props.longitude} 
+            offsetLeft={-20} 
+            offsetTop={-10}
+          >
+            <img alt="" src="./placeholder.png" />
+          </Marker>
+        </ReactMapGL>
       </div>
     );
 }
