@@ -11,7 +11,7 @@ function SearchBar(props) {
             <button className="btn">
                 <svg xmlns="http://www.w3.org/2000/svg" width="11" height="14"><path fill="none" stroke="#FFF" stroke-width="3" d="M2 1l6 6-6 6"/></svg>
             </button>
-            <p className="SearchBar__error" style={{display: props.error ? "block" : "none"}}>The input is empty</p>
+            <p className="SearchBar__error" style={{display: props.error ? "block" : "none"}}>Must be a valid IP address</p>
         </form>
     )
 }
